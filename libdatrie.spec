@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.gz
 # Source0-md5:	3eaedd5452149e11547a0dc74ee3fcfd
 URL:		http://linux.thai.net/projects/datrie
+BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
