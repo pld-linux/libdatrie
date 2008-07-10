@@ -1,12 +1,12 @@
 Summary:	Double-Array Trie library
 Summary(pl.UTF-8):	Biblioteka dwutablicowego trie
 Name:		libdatrie
-Version:	0.1.2
+Version:	0.1.3
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.gz
-# Source0-md5:	3eaedd5452149e11547a0dc74ee3fcfd
+# Source0-md5:	917a40de487df3c29650b7434f473fa0
 URL:		http://linux.thai.net/projects/datrie
 BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -79,23 +79,16 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/trietool
 %attr(755,root,root) %{_libdir}/libdatrie.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdatrie.so.0
 %{_mandir}/man1/trietool.1*
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/html/*
 %attr(755,root,root) %{_libdir}/libdatrie.so
 %{_libdir}/libdatrie.la
 %{_includedir}/datrie
 %{_pkgconfigdir}/datrie.pc
-# only public API
-%{_mandir}/man3/sb-trie.h.3*
-%{_mandir}/man3/trie.h.3*
-%{_mandir}/man3/triedefs.h.3*
-%{_mandir}/man3/SB*.3*
-%{_mandir}/man3/sb_trie_*.3*
-%{_mandir}/man3/TRIE_*.3*
-%{_mandir}/man3/Trie*.3*
-%{_mandir}/man3/trie_*.3*
 
 %files static
 %defattr(644,root,root,755)
