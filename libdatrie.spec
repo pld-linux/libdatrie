@@ -1,12 +1,12 @@
 Summary:	Double-Array Trie library
 Summary(pl.UTF-8):	Biblioteka dwutablicowego trie
 Name:		libdatrie
-Version:	0.1.3
+Version:	0.2.0
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.gz
-# Source0-md5:	917a40de487df3c29650b7434f473fa0
+# Source0-md5:	20de77e7aeff5250cbb320bdcac51db6
 URL:		http://linux.thai.net/projects/datrie
 BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -77,18 +77,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/trietool
+%attr(755,root,root) %{_bindir}/trietool-0.2
 %attr(755,root,root) %{_libdir}/libdatrie.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libdatrie.so.0
-%{_mandir}/man1/trietool.1*
+%attr(755,root,root) %ghost %{_libdir}/libdatrie.so.1
+%{_mandir}/man1/trietool-0.2.1*
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/html/*
+%doc doc/html/* README.migration
 %attr(755,root,root) %{_libdir}/libdatrie.so
 %{_libdir}/libdatrie.la
 %{_includedir}/datrie
-%{_pkgconfigdir}/datrie.pc
+%{_pkgconfigdir}/datrie-0.2.pc
 
 %files static
 %defattr(644,root,root,755)
