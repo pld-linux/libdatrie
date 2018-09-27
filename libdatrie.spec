@@ -1,12 +1,12 @@
 Summary:	Double-Array Trie library
 Summary(pl.UTF-8):	Biblioteka dwutablicowego trie
 Name:		libdatrie
-Version:	0.2.11
+Version:	0.2.12
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.xz
-# Source0-md5:	486a3a9cda1265ddedbea61fe5c7f3cc
+# Source0-md5:	b2243d583e25925200c134fad9f2fb50
 URL:		https://linux.thai.net/projects/datrie
 BuildRequires:	doxygen >= 1:1.8.8
 BuildRequires:	tar >= 1:1.22
