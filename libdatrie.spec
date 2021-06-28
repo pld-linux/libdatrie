@@ -1,12 +1,12 @@
 Summary:	Double-Array Trie library
 Summary(pl.UTF-8):	Biblioteka dwutablicowego trie
 Name:		libdatrie
-Version:	0.2.12
+Version:	0.2.13
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.xz
-# Source0-md5:	b2243d583e25925200c134fad9f2fb50
+# Source0-md5:	e26b5aa008b5f3588ab38d2dce9e9325
 URL:		https://linux.thai.net/projects/datrie
 BuildRequires:	doxygen >= 1:1.8.8
 BuildRequires:	tar >= 1:1.22
@@ -70,8 +70,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libdatrie.la
+
 # packaged as %doc
-%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/{datrie,libdatrie}
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/datrie
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -93,7 +96,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/html/* README.migration
 %attr(755,root,root) %{_libdir}/libdatrie.so
-%{_libdir}/libdatrie.la
 %{_includedir}/datrie
 %{_pkgconfigdir}/datrie-0.2.pc
 
